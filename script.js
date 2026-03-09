@@ -16,6 +16,12 @@ async function buscarCidade(cidade) {
 
 function cliqueiNoBotao() {
     const cidade = document.querySelector(".input-cidade").value
-
     buscarCidade(cidade)
 }
+
+
+document.querySelector(".input-cidade").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        cliqueiNoBotao()
+    }
+})
